@@ -1,0 +1,16 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "strict": true,
+        "noEmitOnError": true,
+        "removeComments": false,
+        "sourceMap": true,
+        "target": "ESNext",
+        "module": "ESNext",
+        "outDir": "wwwroot/js"
+    },
+    "exclude": [
+        "node_modules",
+        "wwwroot"
+    ]
+}

@@ -1,0 +1,21 @@
+﻿@page "/"
+
+@inject IJSRuntime Js;
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<button @onclick="SayHelloAsync">
+    Say Hello
+</button>
+
+@code {
+
+    async Task SayHelloAsync()
+    {
+        var mod = await Js.InvokeAsync<IJSObjectReference>("import", "/js/hello.js");
+        await mod.InvokeVoidAsync("hello");
+    }
+
+}
